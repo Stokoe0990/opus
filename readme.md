@@ -7,7 +7,7 @@ Installation:
 ```bash
 git clone https://github.com/stokoe0990/opus
 cd opus
-cp .env.dist .env
+cp .env.example .env
 composer install
 php artisan key:generate
 php artisan migrate:fresh --force --seed
