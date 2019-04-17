@@ -131,6 +131,8 @@ class WikiController extends Controller
 
         $wikiTags = $this->wiki->find($wiki->id)->tags()->get();
 
+        $pages = $wiki->pages;
+
         $isUserLikeWiki = false;
         foreach ($wiki->likes as $like) {
             if ($like->user_id === Auth::user()->id) {

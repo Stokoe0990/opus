@@ -27,12 +27,12 @@
                                 <li>
                                     <a href="{{ route('pages.destroy', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;" data-method="delete" data-confirm="Are you sure?"><i class="fa fa-trash-o icon"></i> Delete</a>
                                 </li>
-                                <li>
+                                {{--  <li>
                                     <a href="{{ route('pages.word', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-file-word-o icon"></i> Export to Word</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('pages.pdf', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-file-pdf-o icon"></i> Export to PDF</a>
-                                </li>
+                                </li>  --}}
                                 <li>
                                     <a href="{{ route('pages.settings', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-cog icon"></i> Settings</a>
                                 </li>

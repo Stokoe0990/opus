@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
 {
     private $seeders = [
         RolesTableSeeder::class,
-        PagesTableSeeder::class,
+        // PagesTableSeeder::class,
         TeamsTableSeeder::class,
         UsersTableSeeder::class,
         WikisTableSeeder::class,

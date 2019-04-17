@@ -65,6 +65,31 @@ class PageController extends Controller
         $this->request = $request;
     }
 
+    public function index(Team $team, Space $space, Wiki $wiki)
+    {
+        $page = $wiki->pages->first();
+
+        $isPageInReadList = ReadList::where('user_id', Auth::user()->id)->where('subject_id', $page->id)->where('subject_type', Page::class)->first();
+
+        $pageTags = $this->page->find($page->id)->tags()->get();
+
+        $isUserLikeWiki = false;
+        foreach ($wiki->likes as $like) {
+            if ($like->user_id === Auth::user()->id) {
+                $isUserLikeWiki = true;
+            }
+        }
+
+        $isUserLikePage = false;
+        foreach ($page->likes as $like) {
+            if ($like->user_id === Auth::user()->id) {
+                $isUserLikePage = true;
+            }
+        }
+
+        return view('page.index', compact('team', 'pageTags', 'page', 'wiki', 'space', 'isUserLikeWiki', 'isUserLikePage', 'isPageInReadList'));
+    }
+
     /**
      * This functions checks if current request wants to fetch pages tree to a specified page or
      * wants to get the root pages of a wiki or get the child's of a page and then returns the

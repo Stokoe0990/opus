@@ -4,7 +4,8 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use GrahamCampbell\Exceptions\ExceptionHandler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -32,6 +33,10 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $exception)
     {
+        if (app()->bound('sentry') && $this->shouldReport($exception)){
+            app('sentry')->captureException($exception);
+        }
+        
         parent::report($exception);
     }
 
@@ -46,6 +51,10 @@ class Handler extends ExceptionHandler
     {
         if ($exception instanceof AuthenticationException) {
             return $this->unauthenticated($request, $exception);
+        }
+
+        if ($exception instanceof NotFoundHttpException) {
+            return response()->view('errors.404');
         }
 
         return parent::render($request, $exception);

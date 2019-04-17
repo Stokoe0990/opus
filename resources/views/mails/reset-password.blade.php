@@ -47,14 +47,11 @@
 <body>
     <div class="container">
         <div style="width: 580px;">
-            <div style="margin-bottom: 15px;">
-                <img src="http://opus.dev/img/home-logo.png" width="74" alt="">
-            </div>
             <p>Hello {{ $email }}!</p>
-            <p style="margin-bottom: 18px;">Someone has requested a link to change your password. You can do this through the link below.</p>
+            <p style="margin-bottom: 18px;">Someone has requested a link to change your password on {{ url('') }}. You can do this through the link below.</p>
             <a href="{{ url('/password/reset/'.$token) }}" class="btn btn-success" style="text-decoration: none; border-radius: 0px; margin-bottom: 18px;">Change my password</a>
-            <p>If you did't request this, please ignore this email.</p>
-            <p>Your password won't change until you access the above and create a new one.</p>
+            <p>If you did't request this change, please ignore this email and consider reporting this incident.</p>
+            <p>Your password won't change until you access the link above and create a new one.</p>
         </div>
     </div>
 </body>

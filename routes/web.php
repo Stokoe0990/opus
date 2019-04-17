@@ -3,7 +3,8 @@
 Route::get('logout', 'UserController@logout')->name('logout');
 
 Route::group(['middleware' => 'guest'], function () {
-    Route::get('/', 'HomeController@home')->name('home');
+    // Route::get('/', 'HomeController@home')->name('home');
+    Route::get('/', 'TeamController@login')->name('home');
     Route::get('team/login', 'TeamController@login')->name('team.login');
     Route::post('team/login', 'TeamController@postLogin')->name('team.postlogin');
     Route::get('team/create', 'TeamController@create')->name('team.create');
@@ -130,6 +131,7 @@ Route::group(['prefix' => 'teams', 'middleware' => 'auth'], function () {
         Route::get('{wiki_slug}/pages/{page_slug}', 'PageController@show')->name('pages.show');
         Route::delete('{wiki_slug}/pages/{page_slug}', 'PageController@destroy')->name('pages.destroy');
         Route::get('{wiki_slug}/pages/{page_slug}/edit', 'PageController@edit')->name('pages.edit');
+        Route::get('{wiki_slug}/pages', 'PageController@index');
         Route::post('{wiki_slug}/pages', 'PageController@store')->name('pages.store');
         Route::get('{wiki_slug}/edit', 'WikiController@edit')->name('wikis.edit');
         Route::patch('{wiki_slug}/pages/{page_slug}', 'PageController@update')->name('pages.update');
@@ -141,4 +143,8 @@ Route::group(['prefix' => 'teams', 'middleware' => 'auth'], function () {
         Route::delete('{wiki_slug}/pages/{page_slug}/{comment_id}', 'CommentController@destroy')->name('comments.delete');
     });
 
+});
+
+Route::group(['prefix' => 'uploader', 'as' => 'uploader.', 'middleware' => 'auth'], function () {
+    Route::post('upload', 'FileController@store')->name('upload');
 });

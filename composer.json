@@ -10,6 +10,12 @@
       "email": "ziishaned@gmail.com",
       "homepage": "https://github.com/ziishaned",
       "role": "developer"
+    },
+    {
+      "name": "Michael Stokoe",
+      "email": "michael@koecreative.com",
+      "homepage": "https://koecreative.com",
+      "role": "developer - ported to laravel 5.8"
     }
   ],
   "keywords": [
@@ -22,20 +28,24 @@
   "type": "project",
   "require": {
     "php": ">=7.0",
-    "laravel/framework": "5.4.*",
+    "baum/baum": "dev-master",
     "cviebrock/eloquent-sluggable": "^4.1",
-    "baum/baum": "^1.1",
+    "doctrine/dbal": "^2.5",
+    "fenos/notifynder": "^4.0",
+    "filp/whoops": "^2.3",
+    "graham-campbell/exceptions": "^11.2",
     "guzzlehttp/guzzle": "~5.3|~6.0",
     "intervention/image": "^2.3",
-    "barryvdh/laravel-snappy": "^0.3.3",
-    "fenos/notifynder": "^4.0",
-    "doctrine/dbal": "^2.5",
-    "laravel/tinker": "^1.0"
+    "laravel/framework": "5.8.*",
+    "laravel/telescope": "^2.0",
+    "laravel/tinker": "^1.0",
+    "sentry/sentry-laravel": "1.0.1"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
     "phpunit/phpunit": "~5.7",
-    "squizlabs/php_codesniffer": "2.*"
+    "squizlabs/php_codesniffer": "2.*",
+    "barryvdh/laravel-debugbar": "^3.2"
   },
   "autoload": {
     "classmap": [
@@ -67,6 +77,31 @@
     ]
   },
   "config": {
-    "preferred-install": "dist"
-  }
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "platform": {
+        "ext-pcntl": "7.2",
+        "ext-posix": "7.2",
+        "ext-iconv": "7.2",
+        "ext-bcmath": "7.2"
+    }
+  },
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+          "name": "baum/baum",
+          "version": "dev-master",
+          "source": {
+              "url": "https://github.com/stokoe0990/baum",
+              "type": "git",
+              "reference": "master"
+          },
+          "autoload": {
+              "classmap": [""]
+          }
+      }
+    }
+  ]
 }

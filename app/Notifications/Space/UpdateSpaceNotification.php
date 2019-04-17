@@ -16,12 +16,12 @@ class UpdateSpaceNotification extends BaseNotification
     }
 
     public function toSlack()
-    {
-        return (new SlackMessage)
-            ->from($this->from)
-            ->attachment(function ($attachment) {
-                $attachment
-                    ->content(':floppy_disk: <' . route('users.show', [$this->space->team->slug, $this->space->user->slug,]) . '|' . $this->space->user->first_name . ' ' . $this->space->user->last_name . '> just updated a space  <' . route('categories.wikis', [$this->space->team->slug, $this->space->slug,]) . '|' . $this->space->name . '>');
-            });
+    // {
+    //     return (new SlackMessage)
+    //         ->from($this->from)
+    //         ->attachment(function ($attachment) {
+    //             $attachment
+    //                 ->content(':floppy_disk: <' . route('users.show', [$this->space->team->slug, $this->space->user->slug,]) . '|' . $this->space->user->first_name . ' ' . $this->space->user->last_name . '> just updated a space  <' . route('categories.wikis', [$this->space->team->slug, $this->space->slug,]) . '|' . $this->space->name . '>');
+    //         });
     }
 }

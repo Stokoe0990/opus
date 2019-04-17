@@ -15,6 +15,6 @@ class BaseNotification extends Notification
 
     public function via($notifiable)
     {
-        return ['slack'];
+        return null;
     }
 }

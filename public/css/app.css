@@ -933,6 +933,7 @@ ul.home-nav li a:hover {
 	background-color: #fbfbfb;
 	border-bottom: 1px solid #eee;
 	padding: 10px;
+	min-height: 50.5px;
 }
 
 .wiki-nav>nav>ul {
@@ -962,6 +963,7 @@ ul.home-nav li a:hover {
 	border: 1px solid #ddd;
 	margin: -1px;
 	color: #333;
+	display: block;
 }
 
 /**************************** jsTree ************************************/
@@ -1166,6 +1168,10 @@ ul.home-nav li a:hover {
 
 blockquote {
     margin: 0;
+}
+
+.markdown-body a {
+	color: #337ab7;
 }
 
 .markdown-body b, .markdown-body strong {

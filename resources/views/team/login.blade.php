@@ -13,15 +13,15 @@
                     </div>
                 @endif
                 <form action="{{ route('team.postlogin') }}" method="POST" role="form">
-		            <div class="form-group {{ $errors->has('team_name') ? 'has-error' : '' }}">
-                        <label for="team-name" class="control-label">Team Name</label>
-                        <input type="text" name="team_name" class="form-control" id="team-name" autocomplete="on" required>
-                        @if($errors->has('team_name'))
+		            {{--  <div class="form-group {{ $errors->has('team_name') ? 'has-error' : '' }}">
+                        <label for="team-name" class="control-label">Team Name</label>  --}}
+                        <input type="text" name="team_name" class="form-control" id="team-name" autocomplete="on" value="Consilience" style="display: none;">
+                        {{--  @if($errors->has('team_name'))
                             <p class="help-block has-error">{{ $errors->first('team_name') }}</p>
                         @else
                             <p class="help-block">Enter your team name here. e.g. Google</p>
                         @endif
-                    </div>
+                    </div>  --}}
 		            <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
 		                <label for="email" class="control-label">Email</label>
 		                <input name="email" id="email" value="{{ old('email') }}" type="email" class="form-control" placeholder="john@doe.com" required>
@@ -48,7 +48,6 @@
 		            </div>
 		        </form>
 			</div>
-			<p class="text-center" style="font-size: 14px;"><span class="text-muted" style="margin-left: 15px;">Don't have a team?</span> <a href="{{ route('team.create') }}">Create now</a>.</p>
 		</div>
 	</div>
 @endsection()

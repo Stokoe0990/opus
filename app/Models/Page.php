@@ -77,59 +77,59 @@ class Page extends Node
     {
         parent::boot();
 
-        static::created(function ($page) {
-            $page->notify(new CreatePageNotification($page));
+        // static::created(function ($page) {
+        //     $page->notify(new CreatePageNotification($page));
 
-            $watchingList = (new WatchWiki)->getWikiWatchers($page->wiki_id);
+        //     $watchingList = (new WatchWiki)->getWikiWatchers($page->wiki_id);
 
-            if (!empty($watchingList)) {
-                foreach ($watchingList as $watch) {
-                    $url = route('pages.show', [Auth::user()->getTeam()->slug, $watch->wiki->space->slug, $watch->wiki->slug, $page->slug]);
-                    Notifynder::category('page.created')
-                        ->from(Auth::user()->id)
-                        ->to($watch->user_id)
-                        ->url($url)
-                        ->extra(['wiki_name' => $watch->wiki->name, 'username' => Auth::user()->name, 'page_name' => $page->name])
-                        ->send();
-                }
-            }
-        });
+        //     if (!empty($watchingList)) {
+        //         foreach ($watchingList as $watch) {
+        //             $url = route('pages.show', [Auth::user()->getTeam()->slug, $watch->wiki->space->slug, $watch->wiki->slug, $page->slug]);
+        //             Notifynder::category('page.created')
+        //                 ->from(Auth::user()->id)
+        //                 ->to($watch->user_id)
+        //                 ->url($url)
+        //                 ->extra(['wiki_name' => $watch->wiki->name, 'username' => Auth::user()->name, 'page_name' => $page->name])
+        //                 ->send();
+        //         }
+        //     }
+        // });
 
-        static::updated(function ($page) {
-            $page->notify(new UpdatePageNotification($page));
+        // static::updated(function ($page) {
+        //     $page->notify(new UpdatePageNotification($page));
 
-            $watchingList = (new WatchWiki)->getWikiWatchers($page->wiki_id);
+        //     $watchingList = (new WatchWiki)->getWikiWatchers($page->wiki_id);
 
-            if (!empty($watchingList)) {
-                foreach ($watchingList as $watch) {
-                    $url = route('pages.show', [Auth::user()->getTeam()->slug, $watch->wiki->space->slug, $watch->wiki->slug, $page->slug]);
-                    Notifynder::category('page.updated')
-                        ->from(Auth::user()->id)
-                        ->to($watch->user_id)
-                        ->url($url)
-                        ->extra(['wiki_name' => $watch->wiki->name, 'username' => Auth::user()->name, 'page_name' => $page->name])
-                        ->send();
-                }
-            }
-        });
+        //     if (!empty($watchingList)) {
+        //         foreach ($watchingList as $watch) {
+        //             $url = route('pages.show', [Auth::user()->getTeam()->slug, $watch->wiki->space->slug, $watch->wiki->slug, $page->slug]);
+        //             Notifynder::category('page.updated')
+        //                 ->from(Auth::user()->id)
+        //                 ->to($watch->user_id)
+        //                 ->url($url)
+        //                 ->extra(['wiki_name' => $watch->wiki->name, 'username' => Auth::user()->name, 'page_name' => $page->name])
+        //                 ->send();
+        //         }
+        //     }
+        // });
 
-        static::deleting(function ($page) {
-            $page->notify(new DeletePageNotification($page));
+        // static::deleting(function ($page) {
+        //     $page->notify(new DeletePageNotification($page));
 
-            $watchingList = (new WatchWiki)->getWikiWatchers($page->wiki_id);
+        //     $watchingList = (new WatchWiki)->getWikiWatchers($page->wiki_id);
 
-            if (!empty($watchingList)) {
-                foreach ($watchingList as $watch) {
-                    $url = route('pages.show', [Auth::user()->getTeam()->slug, $watch->wiki->space->slug, $watch->wiki->slug, $page->slug]);
-                    Notifynder::category('page.deleted')
-                        ->from(Auth::user()->id)
-                        ->to($watch->user_id)
-                        ->url($url)
-                        ->extra(['wiki_name' => $watch->wiki->name, 'username' => Auth::user()->name, 'page_name' => $page->name])
-                        ->send();
-                }
-            }
-        });
+        //     if (!empty($watchingList)) {
+        //         foreach ($watchingList as $watch) {
+        //             $url = route('pages.show', [Auth::user()->getTeam()->slug, $watch->wiki->space->slug, $watch->wiki->slug, $page->slug]);
+        //             Notifynder::category('page.deleted')
+        //                 ->from(Auth::user()->id)
+        //                 ->to($watch->user_id)
+        //                 ->url($url)
+        //                 ->extra(['wiki_name' => $watch->wiki->name, 'username' => Auth::user()->name, 'page_name' => $page->name])
+        //                 ->send();
+        //         }
+        //     }
+        // });
     }
 
     /**
