@@ -12,7 +12,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                                 <label class="control-label" for="name">Name</label>
-                                <input type="text" name="name" value="{{ old('name') }}" class="form-control" id="name" required>
+                                <input type="text" name="name" value="{{ old('name') }}" class="form-control" id="name" maxlength="35" required>
                                 @if($errors->has('name'))
                                     <p class="help-block has-error">{{ $errors->first('name') }}</p>
                                 @endif
