@@ -126,7 +126,7 @@ var App = {
         });
     },
     initCKEditor() { // TODO: Add image uploads, Opus did not come with this out of the box.
-        if ($('#wiki-description').length) {			
+        if ($('#wiki-description').length) {
 
             CKEDITOR.replace('wiki-description', {
                 width: "100%",
@@ -139,7 +139,7 @@ var App = {
                 resize_enabled: false,
                 uiColor: '#eeeeee',
                 toolbar: [
-                    {name: 'justify3', items: ['Format']},
+                    { name: 'justify3', items: ['Format'] },
                     {
                         name: 'clipboard',
                         items: ['PasteFromWord', 'File', '-', 'Bold', 'Italic', 'Underline', 'Strike']
@@ -148,11 +148,11 @@ var App = {
                         name: 'colors',
                         items: ['TextColor', 'BGColor', 'RemoveFormat', '-', 'NumberedList', 'BulletedList']
                     },
-                    {name: 'justify', items: ['JustifyLeft', 'JustifyCenter', 'JustifyRight']},
-                    {name: 'insert', items: ['Image', 'Table', 'HorizontalRule', '-', 'Link', 'Iframe']},
-                    {name: 'editing', items: ['SpellCheck']},
-                    {name: 'paragraph', items: ['-', 'Outdent', 'Indent']},
-                    {name: 'justify2', items: ['CodeSnippet', 'Source', '-', 'Undo', 'Redo']},
+                    { name: 'justify', items: ['JustifyLeft', 'JustifyCenter', 'JustifyRight'] },
+                    { name: 'insert', items: ['Image', 'Table', 'HorizontalRule', '-', 'Link', 'Iframe'] },
+                    { name: 'editing', items: ['SpellCheck'] },
+                    { name: 'paragraph', items: ['-', 'Outdent', 'Indent'] },
+                    { name: 'justify2', items: ['CodeSnippet', 'Source', '-', 'Undo', 'Redo'] },
                 ],
                 // TODO: Must finish this!
                 filebrowserUploadUrl: '/uploader/upload',
@@ -206,7 +206,7 @@ var App = {
         ];
 
         var emojis = $.map(emojis, function (value, i) {
-            return {key: value, name: value}
+            return { key: value, name: value }
         });
 
         $('#comment-input-textarea').atwho({
@@ -618,3 +618,7 @@ $(function () {
         });
     }
 });
+
+$(function () {
+    $('.markdown-body').find('a').attr("target", "_blank");
+})
