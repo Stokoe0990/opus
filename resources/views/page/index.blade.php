@@ -42,7 +42,8 @@
                     </div>
                     <div class="markdown-body" style="padding: 0px 25px;">
                         @if($page->description)
-                            {!! $page->description !!}
+                            {{-- {!! $page->description !!} --}}
+                            {!! Markdown::parse($page->description) !!}
                         @else 
                             <span style="font-size: 22px; font-weight: 700; line-height: 0px;">...</span>
                         @endif

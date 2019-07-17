@@ -153,6 +153,7 @@ var App = {
                     { name: 'editing', items: ['SpellCheck'] },
                     { name: 'paragraph', items: ['-', 'Outdent', 'Indent'] },
                     { name: 'justify2', items: ['CodeSnippet', 'Source', '-', 'Undo', 'Redo'] },
+                    { name: 'Markdown', items: ['Markdown']},
                 ],
                 // TODO: Must finish this!
                 filebrowserUploadUrl: '/uploader/upload',
