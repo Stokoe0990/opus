@@ -37,5 +37,5 @@ class CreateCommentNotification extends BaseNotification
     //                 $attachment
     //                     ->content($this->comment->content);
     //             });
-    // }
+    }
 }
