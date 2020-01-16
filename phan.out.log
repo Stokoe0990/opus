@@ -1,0 +1,296 @@
+app/Console/Commands/AppCommand.php:5 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace Artisan (\Artisan)
+app/Exceptions/Handler.php:20 PhanUndeclaredClassConstant Reference to constant class from undeclared class \Symfony\Component\HttpKernel\Exception\HttpException
+app/Exceptions/Handler.php:37 PhanUndeclaredMethod Call to undeclared method \Illuminate\Contracts\Foundation\Application::captureException
+app/Exceptions/Handler.php:56 PhanUndeclaredClassInstanceof Checking instanceof against undeclared class \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+app/Exceptions/Handler.php:73 PhanTypeMismatchReturn Returning type \Illuminate\Http\JsonResponse but unauthenticated() is declared to return \Illuminate\Http\Response
+app/Exceptions/Handler.php:76 PhanTypeMismatchReturn Returning type \Illuminate\Http\RedirectResponse but unauthenticated() is declared to return \Illuminate\Http\Response
+app/Helpers/EmojiHelper.php:564 PhanUndeclaredVariable Variable $offset is undeclared
+app/Helpers/EmojiHelper.php:571 PhanUndeclaredVariable Variable $offset is undeclared
+app/Helpers/EmojiHelper.php:576 PhanUndeclaredVariableAssignOp Variable $offset was undeclared, but it is being used as the left-hand side of an assignment operation
+app/Helpers/HtmlToDocHelper.php:75 PhanCommentParamWithoutRealParam Saw an @param annotation for $html, but it was not found in the param list of function createDocFromURL($url, string $file, bool|false $download = null) : bool
+app/Helpers/HtmlToDocHelper.php:120 PhanTypeMismatchReturn Returning type void but createDoc() is declared to return bool
+app/Helpers/HtmlToDocHelper.php:133 PhanTypeMismatchReturn Returning type string but parseHtml() is declared to return void
+app/Helpers/HtmlToDocHelper.php:141 PhanUnextractableAnnotation Saw unextractable annotation for comment '* @param [optional] String $mode Write Mode'
+app/Helpers/HtmlToDocHelper.php:148 PhanTypeMismatchReturn Returning type false but writeFile() is declared to return void
+app/Helpers/HtmlToDocHelper.php:154 PhanTypeMismatchReturn Returning type true but writeFile() is declared to return void
+app/Http/Controllers/CommentController.php:104 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/CommentController.php:105 PhanUndeclaredClassMethod Call to method category from undeclared class \Notifynder
+app/Http/Controllers/CommentController.php:106 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/CommentController.php:107 PhanTypeExpectedObjectPropAccess Expected an object instance when accessing an instance property, but saw an expression with type bool
+app/Http/Controllers/CommentController.php:109 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/CommentController.php:112 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/CommentController.php:113 PhanUndeclaredClassMethod Call to method category from undeclared class \Notifynder
+app/Http/Controllers/CommentController.php:114 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/CommentController.php:115 PhanTypeExpectedObjectPropAccess Expected an object instance when accessing an instance property, but saw an expression with type bool
+app/Http/Controllers/CommentController.php:117 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/CommentController.php:181 PhanUndeclaredVariable Variable $team is undeclared
+app/Http/Controllers/CommentController.php:182 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Emoji
+app/Http/Controllers/CommentController.php:182 PhanUndeclaredClassMethod Call to method render from undeclared class \Emoji
+app/Http/Controllers/FileController.php:26 PhanPossiblyUndeclaredVariable Variable $filename is possibly undeclared
+app/Http/Controllers/FileController.php:28 PhanPossiblyUndeclaredVariable Variable $filename is possibly undeclared
+app/Http/Controllers/IntegrationController.php:72 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/IntegrationController.php:75 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/IntegrationController.php:76 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/IntegrationController.php:161 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/IntegrationController.php:164 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/IntegrationController.php:167 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/IntegrationController.php:168 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/InviteController.php:72 PhanUndeclaredClassMethod Call to method send from undeclared class \Mail
+app/Http/Controllers/LikeController.php:69 PhanPluginAlwaysReturnMethod Method \App\Http\Controllers\LikeController::storeLike has a return type of \Illuminate\Http\JsonResponse, but may fail to return a value
+app/Http/Controllers/LikeController.php:74 PhanTypeExpectedObjectPropAccess Expected an object instance when accessing an instance property, but saw an expression with type bool
+app/Http/Controllers/LikeController.php:136 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/LikeController.php:143 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/NotificationController.php:26 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/NotificationController.php:38 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/PageController.php:72 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/PageController.php:78 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/PageController.php:85 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/PageController.php:174 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/PageController.php:195 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/PageController.php:198 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/PageController.php:386 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/PageController.php:392 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/PageController.php:399 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/PageController.php:458 PhanUndeclaredClassMethod Call to method loadView from undeclared class \Pdf
+app/Http/Controllers/PageController.php:472 PhanTypeMismatchArgument Argument 1 ($data) is bool but \Illuminate\Contracts\Routing\ResponseFactory::json() takes array|object|string defined at vendor/laravel/framework/src/Illuminate/Contracts/Routing/ResponseFactory.php:46
+app/Http/Controllers/PageController.php:489 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/PageController.php:509 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/PageController.php:530 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/RoleController.php:38 PhanUndeclaredProperty Reference to undeclared property \App\Http\Controllers\RoleController->space (Did you mean $space)
+app/Http/Controllers/RoleController.php:51 PhanUndeclaredProperty Reference to undeclared property \App\Http\Controllers\RoleController->space
+app/Http/Controllers/RoleController.php:83 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/RoleController.php:87 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/RoleController.php:88 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/RoleController.php:95 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/RoleController.php:98 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/RoleController.php:99 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/RoleController.php:135 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/RoleController.php:136 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/RoleController.php:140 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/RoleController.php:144 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/RoleController.php:145 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/RoleController.php:152 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/RoleController.php:155 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/RoleController.php:156 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/TeamController.php:46 PhanUnextractableAnnotation Saw unextractable annotation for comment '* @var'
+app/Http/Controllers/TeamController.php:157 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/TeamController.php:160 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/TeamController.php:161 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/TeamController.php:166 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/TeamController.php:170 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/TeamController.php:171 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/TeamController.php:215 PhanTypeMismatchArgument Argument 1 ($user) is true but \Illuminate\Support\Facades\Auth::login() takes \Illuminate\Contracts\Auth\Authenticatable defined at vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php:16
+app/Http/Controllers/TeamController.php:218 PhanTypeExpectedObjectPropAccess Expected an object instance when accessing an instance property, but saw an expression with type true
+app/Http/Controllers/TeamController.php:268 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/TeamController.php:270 PhanDeprecatedFunction Call to deprecated function \str_slug() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:1073 (Deprecated because: Str::slug() should be used directly instead. Will be removed in Laravel 6.0.)
+app/Http/Controllers/TeamController.php:273 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/TeamController.php:274 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/TeamController.php:278 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/TeamController.php:280 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/TeamController.php:283 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/TeamController.php:284 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/TeamController.php:289 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/TeamController.php:293 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/TeamController.php:294 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/TeamController.php:340 PhanUndeclaredClassMethod Call to method make from undeclared class \Image
+app/Http/Controllers/TeamController.php:359 PhanUndeclaredMethod Call to undeclared method \Illuminate\Contracts\Auth\Authenticatable::getTeam
+app/Http/Controllers/TeamController.php:373 PhanUndeclaredMethod Call to undeclared method \Illuminate\Contracts\Auth\Authenticatable::getTeam
+app/Http/Controllers/UserController.php:124 PhanUndeclaredClassMethod Call to method make from undeclared class \Image
+app/Http/Controllers/UserController.php:168 PhanUnextractableAnnotationSuffix Saw a token Phan may have failed to parse after '* @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View/': after \Illuminate\Contracts\View\Factory|\Illuminate\View\View, saw '/'
+app/Http/Controllers/UserController.php:187 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/UserController.php:208 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/UserController.php:245 PhanUndeclaredClassMethod Call to method logout from undeclared class \Auth
+app/Http/Controllers/UserController.php:246 PhanUndeclaredClassMethod Call to method flush from undeclared class \Session
+app/Http/Controllers/UserController.php:277 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/UserController.php:293 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/UserController.php:323 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/UserController.php:327 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Http/Controllers/UserController.php:346 PhanUndeclaredClassMethod Call to method send from undeclared class \Mail
+app/Http/Controllers/UserController.php:363 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/UserController.php:384 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Http/Controllers/WikiController.php:128 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/WikiController.php:130 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/WikiController.php:138 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/WikiController.php:261 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/WikiController.php:280 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Controllers/WikiController.php:298 PhanUndeclaredClassMethod Call to method loadView from undeclared class \Pdf
+app/Http/Controllers/WikiController.php:311 PhanTypeMismatchArgument Argument 1 ($data) is bool but \Illuminate\Contracts\Routing\ResponseFactory::json() takes array|object|string defined at vendor/laravel/framework/src/Illuminate/Contracts/Routing/ResponseFactory.php:46
+app/Http/Middleware/CheckPermission.php:17 PhanPluginAlwaysReturnMethod Method \App\Http\Middleware\CheckPermission::handle has a return type of mixed, but may fail to return a value
+app/Http/Middleware/CheckPermission.php:19 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Http/Middleware/Invitation.php:5 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace Auth (\Auth)
+app/Http/Middleware/Invitation.php:7 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace Request (\Request)
+app/Http/Middleware/RedirectIfAuthenticated.php:22 PhanUndeclaredMethod Call to undeclared method \Illuminate\Contracts\Auth\Authenticatable::getTeam
+app/Http/Validators/HashValidator.php:12 PhanUndeclaredClassMethod Call to method check from undeclared class \Hash
+app/Http/ViewComposers/NotificationComposer.php:15 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Activity.php:51 PhanPluginAlwaysReturnMethod Method \App\Models\Activity::team has a return type of \Illuminate\Database\Eloquent\Relations\BelongsTo, but may fail to return a value
+app/Models/Activity.php:51 PhanTypeMissingReturn Method \App\Models\Activity::team is declared to return \Illuminate\Database\Eloquent\Relations\BelongsTo but has no return value
+app/Models/Comment.php:46 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Comment.php:56 PhanUndeclaredClassMethod Call to method __construct from undeclared class \App\Notifications\Comment\CreateCommentNotification
+app/Models/Comment.php:99 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Comment.php:100 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Models/Comment.php:101 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Models/Comment.php:113 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Integration.php:97 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Invite.php:55 PhanUndeclaredClassMethod Call to method get from undeclared class \Request
+app/Models/Invite.php:57 PhanUndeclaredClassMethod Call to method get from undeclared class \Request
+app/Models/Invite.php:100 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Models/Page.php:7 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace Notifynder (\Notifynder)
+app/Models/Page.php:11 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace CreatePageNotification (\App\Notifications\Page\CreatePageNotification)
+app/Models/Page.php:12 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace DeletePageNotification (\App\Notifications\Page\DeletePageNotification)
+app/Models/Page.php:13 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace UpdatePageNotification (\App\Notifications\Page\UpdatePageNotification)
+app/Models/Page.php:71 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Page.php:142 PhanTypeMismatchReturn Returning type \Illuminate\Database\Eloquent\Relations\HasMany but comments() is declared to return \Illuminate\Database\Eloquent\Relations\BelongsTo
+app/Models/Page.php:152 PhanTypeMismatchReturn Returning type \Illuminate\Database\Eloquent\Relations\BelongsToMany but tags() is declared to return \Illuminate\Database\Eloquent\Relations\BelongsTo
+app/Models/Page.php:216 PhanTypeExpectedObjectPropAccess Expected an object instance when accessing an instance property, but saw an expression with type bool
+app/Models/Page.php:260 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Page.php:262 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Page.php:274 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/ReadList.php:56 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/ReadList.php:71 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/RecordsActivity.php:28 PhanUndeclaredProperty Reference to undeclared property \App\Models\RecordsActivity->id
+app/Models/RecordsActivity.php:31 PhanUndeclaredProperty Reference to undeclared property \App\Models\RecordsActivity->user_id
+app/Models/RecordsActivity.php:31 PhanUndeclaredProperty Reference to undeclared property \Illuminate\Contracts\Auth\Authenticatable->id
+app/Models/RecordsActivity.php:32 PhanUndeclaredMethod Call to undeclared method \Illuminate\Contracts\Auth\Authenticatable::getTeam
+app/Models/RecordsActivity.php:45 PhanUndeclaredStaticProperty Static property 'recordEvents' on \App\Models\RecordsActivity is undeclared
+app/Models/RecordsActivity.php:46 PhanUndeclaredStaticProperty Static property 'recordEvents' on \App\Models\RecordsActivity is undeclared
+app/Models/Role.php:96 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Role.php:97 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Role.php:112 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Role.php:113 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Space.php:64 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Space.php:78 PhanUndeclaredClassMethod Call to method __construct from undeclared class \App\Notifications\Space\UpdateSpaceNotification
+app/Models/Space.php:128 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Tag.php:111 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Models/Tag.php:115 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Models/Tag.php:116 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Models/Tag.php:133 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Models/Tag.php:142 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Models/Tag.php:146 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Models/Tag.php:147 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Models/Team.php:5 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace Auth (\Auth)
+app/Models/Team.php:79 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Models/Team.php:82 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Models/Team.php:83 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+app/Models/Team.php:172 PhanTypeMismatchReturn Returning type \Illuminate\Database\Eloquent\Relations\HasMany but pages() is declared to return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+app/Models/Team.php:251 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Models/Team.php:296 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+app/Models/User.php:231 PhanUndeclaredClassMethod Call to method make from undeclared class \Hash
+app/Models/User.php:247 PhanUndeclaredClassMethod Call to method make from undeclared class \Hash
+app/Models/User.php:279 PhanUndeclaredClassMethod Call to method check from undeclared class \Hash
+app/Models/User.php:296 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/WatchWiki.php:65 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/WatchWiki.php:72 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Models/Wiki.php:5 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace Notifynder (\Notifynder)
+app/Models/Wiki.php:11 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace CreateWikiNotification (\App\Notifications\Wiki\CreateWikiNotification)
+app/Models/Wiki.php:12 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace DeleteWikiNotification (\App\Notifications\Wiki\DeleteWikiNotification)
+app/Models/Wiki.php:13 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace UpdateWikiNotification (\App\Notifications\Wiki\UpdateWikiNotification)
+app/Models/Wiki.php:64 PhanUndeclaredMethod Call to undeclared method \Illuminate\Contracts\Auth\Authenticatable::getTeam
+app/Models/Wiki.php:236 PhanUndeclaredProperty Reference to undeclared property \Illuminate\Contracts\Auth\Authenticatable->id
+app/Notifications/BaseNotification.php:7 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace ShouldQueue (\Illuminate\Contracts\Queue\ShouldQueue)
+app/Notifications/BaseNotification.php:8 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace SlackMessage (\Illuminate\Notifications\Messages\SlackMessage)
+app/Notifications/Comment/CreateCommentNotification.php:42 PhanSyntaxError syntax error, unexpected end of file (at column 1)
+app/Notifications/Page/CreatePageNotification.php:7 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace SlackMessage (\Illuminate\Notifications\Messages\SlackMessage)
+app/Notifications/Page/DeletePageNotification.php:7 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace SlackMessage (\Illuminate\Notifications\Messages\SlackMessage)
+app/Notifications/Page/UpdatePageNotification.php:7 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace SlackMessage (\Illuminate\Notifications\Messages\SlackMessage)
+app/Notifications/Space/CreateSpaceNotification.php:7 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace SlackMessage (\Illuminate\Notifications\Messages\SlackMessage)
+app/Notifications/Space/DeleteSpaceNotification.php:7 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace SlackMessage (\Illuminate\Notifications\Messages\SlackMessage)
+app/Notifications/Space/UpdateSpaceNotification.php:26 PhanSyntaxError syntax error, unexpected '}', expecting ';' or '{'
+app/Notifications/Wiki/CreateWikiNotification.php:7 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace SlackMessage (\Illuminate\Notifications\Messages\SlackMessage)
+app/Notifications/Wiki/DeleteWikiNotification.php:13 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace SlackMessage (\Illuminate\Notifications\Messages\SlackMessage)
+app/Notifications/Wiki/UpdateWikiNotification.php:7 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace SlackMessage (\Illuminate\Notifications\Messages\SlackMessage)
+app/Providers/AppServiceProvider.php:11 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace DuskServiceProvider (\Laravel\Dusk\DuskServiceProvider)
+app/Providers/AppServiceProvider.php:24 PhanUndeclaredClassMethod Call to method resolver from undeclared class \Validator
+app/Providers/AppServiceProvider.php:28 PhanUndeclaredClassMethod Call to method extend from undeclared class \Validator
+app/Providers/AppServiceProvider.php:29 PhanUndeclaredClassMethod Call to method get from undeclared class \Request
+app/Providers/AppServiceProvider.php:43 PhanUndeclaredClassMethod Call to method extend from undeclared class \Validator
+app/Providers/AppServiceProvider.php:44 PhanUndeclaredClassMethod Call to method get from undeclared class \Request
+app/Providers/AppServiceProvider.php:58 PhanUndeclaredClassMethod Call to method extend from undeclared class \Validator
+app/Providers/AppServiceProvider.php:59 PhanUndeclaredClassMethod Call to method isMethod from undeclared class \Request
+app/Providers/AppServiceProvider.php:60 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Providers/AppServiceProvider.php:73 PhanUndeclaredClassMethod Call to method extend from undeclared class \Validator
+app/Providers/AppServiceProvider.php:74 PhanUndeclaredClassMethod Call to method get from undeclared class \Request
+app/Providers/AppServiceProvider.php:76 PhanUndeclaredClassMethod Call to method get from undeclared class \Request
+app/Providers/AppServiceProvider.php:85 PhanUndeclaredClassMethod Call to method extend from undeclared class \Validator
+app/Providers/AppServiceProvider.php:86 PhanUndeclaredClassMethod Call to method get from undeclared class \Request
+app/Providers/AppServiceProvider.php:87 PhanUndeclaredClassMethod Call to method get from undeclared class \Request
+app/Providers/AuthServiceProvider.php:5 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace Gate (\Illuminate\Support\Facades\Gate)
+app/Providers/EventServiceProvider.php:5 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace Event (\Illuminate\Support\Facades\Event)
+app/Providers/RouteServiceProvider.php:116 PhanUndeclaredClassMethod Call to method user from undeclared class \Auth
+app/Providers/TelescopeServiceProvider.php:7 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace IncomingEntry (\Laravel\Telescope\IncomingEntry)
+app/Providers/TelescopeServiceProvider.php:42 PhanUndeclaredMethod Call to undeclared method \Illuminate\Contracts\Foundation\Application::isLocal
+database/factories/ActivityFactory.php:19 PhanDeprecatedFunction Call to deprecated function \str_contains() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:908 (Deprecated because: Str::contains() should be used directly instead. Will be removed in Laravel 6.0.)
+database/factories/ActivityFactory.php:22 PhanDeprecatedFunction Call to deprecated function \str_contains() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:908 (Deprecated because: Str::contains() should be used directly instead. Will be removed in Laravel 6.0.)
+database/factories/ActivityFactory.php:25 PhanDeprecatedFunction Call to deprecated function \str_contains() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:908 (Deprecated because: Str::contains() should be used directly instead. Will be removed in Laravel 6.0.)
+database/factories/LikeFactory.php:22 PhanDeprecatedFunction Call to deprecated function \str_contains() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:908 (Deprecated because: Str::contains() should be used directly instead. Will be removed in Laravel 6.0.)
+database/factories/LikeFactory.php:25 PhanDeprecatedFunction Call to deprecated function \str_contains() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:908 (Deprecated because: Str::contains() should be used directly instead. Will be removed in Laravel 6.0.)
+database/factories/PageFactory.php:16 PhanDeprecatedFunction Call to deprecated function \str_slug() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:1073 (Deprecated because: Str::slug() should be used directly instead. Will be removed in Laravel 6.0.)
+database/factories/ReadListFactory.php:21 PhanDeprecatedFunction Call to deprecated function \str_contains() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:908 (Deprecated because: Str::contains() should be used directly instead. Will be removed in Laravel 6.0.)
+database/factories/RoleFactory.php:15 PhanDeprecatedFunction Call to deprecated function \str_slug() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:1073 (Deprecated because: Str::slug() should be used directly instead. Will be removed in Laravel 6.0.)
+database/factories/SpaceFactory.php:15 PhanDeprecatedFunction Call to deprecated function \str_slug() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:1073 (Deprecated because: Str::slug() should be used directly instead. Will be removed in Laravel 6.0.)
+database/factories/TagFactory.php:13 PhanDeprecatedFunction Call to deprecated function \str_slug() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:1073 (Deprecated because: Str::slug() should be used directly instead. Will be removed in Laravel 6.0.)
+database/factories/TeamFactory.php:14 PhanDeprecatedFunction Call to deprecated function \str_slug() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:1073 (Deprecated because: Str::slug() should be used directly instead. Will be removed in Laravel 6.0.)
+database/factories/UserFactory.php:15 PhanDeprecatedFunction Call to deprecated function \str_slug() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:1073 (Deprecated because: Str::slug() should be used directly instead. Will be removed in Laravel 6.0.)
+database/factories/WikiFactory.php:16 PhanDeprecatedFunction Call to deprecated function \str_slug() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:1073 (Deprecated because: Str::slug() should be used directly instead. Will be removed in Laravel 6.0.)
+database/migrations/2014_02_10_145728_notification_categories.php:15 PhanUndeclaredClassMethod Call to method create from undeclared class \Schema
+database/migrations/2014_02_10_145728_notification_categories.php:29 PhanUndeclaredClassMethod Call to method dropIfExists from undeclared class \Schema
+database/migrations/2014_08_01_210813_create_notification_groups_table.php:15 PhanUndeclaredClassMethod Call to method create from undeclared class \Schema
+database/migrations/2014_08_01_210813_create_notification_groups_table.php:28 PhanUndeclaredClassMethod Call to method dropIfExists from undeclared class \Schema
+database/migrations/2014_08_01_211045_create_notification_category_notification_group_table.php:15 PhanUndeclaredClassMethod Call to method create from undeclared class \Schema
+database/migrations/2014_08_01_211045_create_notification_category_notification_group_table.php:31 PhanUndeclaredClassMethod Call to method dropIfExists from undeclared class \Schema
+database/migrations/2015_05_05_212549_create_notifications_table.php:15 PhanUndeclaredClassMethod Call to method create from undeclared class \Schema
+database/migrations/2015_05_05_212549_create_notifications_table.php:39 PhanUndeclaredClassMethod Call to method dropIfExists from undeclared class \Schema
+database/migrations/2015_06_06_211555_add_expire_time_column_to_notification_table.php:14 PhanUndeclaredClassMethod Call to method table from undeclared class \Schema
+database/migrations/2015_06_06_211555_add_expire_time_column_to_notification_table.php:26 PhanUndeclaredClassMethod Call to method table from undeclared class \Schema
+database/migrations/2015_06_06_211555_change_type_to_extra_in_notifications_table.php:14 PhanUndeclaredClassMethod Call to method table from undeclared class \Schema
+database/migrations/2015_06_06_211555_change_type_to_extra_in_notifications_table.php:15 PhanUndeclaredClassMethod Call to method get from undeclared class \Config
+database/migrations/2015_06_06_211555_change_type_to_extra_in_notifications_table.php:18 PhanUndeclaredClassMethod Call to method statement from undeclared class \DB
+database/migrations/2015_06_06_211555_change_type_to_extra_in_notifications_table.php:20 PhanUndeclaredClassMethod Call to method statement from undeclared class \DB
+database/migrations/2015_06_06_211555_change_type_to_extra_in_notifications_table.php:32 PhanUndeclaredClassMethod Call to method table from undeclared class \Schema
+database/migrations/2015_06_06_211555_change_type_to_extra_in_notifications_table.php:33 PhanUndeclaredClassMethod Call to method get from undeclared class \Config
+database/migrations/2015_06_06_211555_change_type_to_extra_in_notifications_table.php:36 PhanUndeclaredClassMethod Call to method statement from undeclared class \DB
+database/migrations/2015_06_06_211555_change_type_to_extra_in_notifications_table.php:38 PhanUndeclaredClassMethod Call to method statement from undeclared class \DB
+database/migrations/2015_06_07_211555_alter_category_name_to_unique.php:14 PhanUndeclaredClassMethod Call to method table from undeclared class \Schema
+database/migrations/2015_06_07_211555_alter_category_name_to_unique.php:26 PhanUndeclaredClassMethod Call to method table from undeclared class \Schema
+database/migrations/2016_04_19_200827_make_notification_url_nullable.php:15 PhanUndeclaredClassMethod Call to method table from undeclared class \Schema
+database/migrations/2016_04_19_200827_make_notification_url_nullable.php:27 PhanUndeclaredClassMethod Call to method table from undeclared class \Schema
+database/migrations/2016_05_19_144531_add_stack_id_to_notifications.php:15 PhanUndeclaredClassMethod Call to method table from undeclared class \Schema
+database/migrations/2016_05_19_144531_add_stack_id_to_notifications.php:27 PhanUndeclaredClassMethod Call to method table from undeclared class \Schema
+database/migrations/2016_07_01_153156_update_version4_notifications_table.php:15 PhanUndeclaredClassMethod Call to method table from undeclared class \Schema
+database/migrations/2016_07_01_153156_update_version4_notifications_table.php:18 PhanUndeclaredClassMethod Call to method table from undeclared class \Schema
+database/migrations/2016_07_01_153156_update_version4_notifications_table.php:30 PhanUndeclaredClassMethod Call to method table from undeclared class \Schema
+database/migrations/2016_07_01_153156_update_version4_notifications_table.php:33 PhanUndeclaredClassMethod Call to method table from undeclared class \Schema
+database/migrations/2016_11_02_193415_drop_version4_unused_tables.php:14 PhanUndeclaredClassMethod Call to method dropIfExists from undeclared class \Schema
+database/migrations/2016_11_02_193415_drop_version4_unused_tables.php:15 PhanUndeclaredClassMethod Call to method dropIfExists from undeclared class \Schema
+database/seeds/Components/Page/PagesTableSeeder.php:36 PhanDeprecatedFunction Call to deprecated function \str_slug() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:1073 (Deprecated because: Str::slug() should be used directly instead. Will be removed in Laravel 6.0.)
+database/seeds/Components/Page/PagesTableSeeder.php:44 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/Page/PagesTableSeeder.php:45 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/Permission/RolePermissionsTableSeeder.php:31 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+database/seeds/Components/Permission/RolePermissionsTableSeeder.php:34 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/Permission/RolePermissionsTableSeeder.php:35 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/Role/RolesTableSeeder.php:35 PhanDeprecatedFunction Call to deprecated function \str_slug() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:1073 (Deprecated because: Str::slug() should be used directly instead. Will be removed in Laravel 6.0.)
+database/seeds/Components/Role/RolesTableSeeder.php:36 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/Role/RolesTableSeeder.php:37 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/Space/SpacesTableSeeder.php:33 PhanDeprecatedFunction Call to deprecated function \str_slug() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:1073 (Deprecated because: Str::slug() should be used directly instead. Will be removed in Laravel 6.0.)
+database/seeds/Components/Space/SpacesTableSeeder.php:37 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/Space/SpacesTableSeeder.php:38 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/Team/InvitesTableSeeder.php:36 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/Team/InvitesTableSeeder.php:37 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/Team/TeamsTableSeeder.php:33 PhanDeprecatedFunction Call to deprecated function \str_slug() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:1073 (Deprecated because: Str::slug() should be used directly instead. Will be removed in Laravel 6.0.)
+database/seeds/Components/Team/TeamsTableSeeder.php:36 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/Team/TeamsTableSeeder.php:37 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/User/UsersRolesTableSeeder.php:31 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+database/seeds/Components/User/UsersRolesTableSeeder.php:35 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/User/UsersRolesTableSeeder.php:36 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/User/UsersTableSeeder.php:35 PhanDeprecatedFunction Call to deprecated function \str_slug() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:1073 (Deprecated because: Str::slug() should be used directly instead. Will be removed in Laravel 6.0.)
+database/seeds/Components/User/UsersTableSeeder.php:40 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/User/UsersTableSeeder.php:41 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/User/UsersTeamsTableSeeder.php:31 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+database/seeds/Components/User/UsersTeamsTableSeeder.php:34 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/User/UsersTeamsTableSeeder.php:35 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/Wiki/WikisTableSeeder.php:33 PhanDeprecatedFunction Call to deprecated function \str_slug() defined at vendor/laravel/framework/src/Illuminate/Support/helpers.php:1073 (Deprecated because: Str::slug() should be used directly instead. Will be removed in Laravel 6.0.)
+database/seeds/Components/Wiki/WikisTableSeeder.php:39 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/Components/Wiki/WikisTableSeeder.php:40 PhanUndeclaredClassMethod Call to method now from undeclared class \Carbon\Carbon
+database/seeds/DatabaseSeeder.php:14 PhanUnreferencedUseNormal Possibly zero references to use statement for classlike/namespace PagesTableSeeder (\Database\Seeds\Components\Page\PagesTableSeeder)
+database/seeds/DatabaseSeeder.php:77 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+database/seeds/DatabaseSeeder.php:78 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
+database/seeds/DatabaseSeeder.php:79 PhanUndeclaredClassMethod Call to method table from undeclared class \DB
