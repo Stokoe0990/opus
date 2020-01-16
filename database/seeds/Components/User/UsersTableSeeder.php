@@ -5,6 +5,7 @@ namespace Database\Seeds\Components\User;
 use Carbon\Carbon;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 /**
  * @author Zeeshan Ahmed <ziishaned@gmail.com>
@@ -34,7 +35,7 @@ class UsersTableSeeder extends Seeder
 			    'last_name'  	=> $user['last_name'],
 			    'slug'  	 	=> str_slug($user['name'], '_'),
 			    'email' 	 	=> $user['email'],
-			    'password' 	 	=> $user['password'],
+			    'password' 	 	=> Hash::make($user['password']),
 			    'profile_image' => $user['profile_image'],
 			    'timezone' 		=> $user['timezone'],
                 'created_at'    => Carbon::now(), 
