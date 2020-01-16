@@ -9,11 +9,18 @@ use App\Models\Page;
 use App\Models\Tag;
 
 $factory->define(PageTags::class, function (Faker $faker) {
-    $subjectType = $faker->randomElement([Wiki::class, Page::class]);
+    $subjectType = $faker->randomElement(
+        [
+            Wiki::class,
+            Page::class
+        ]
+    );
 
     return [
         'tag_id'       => factory(Tag::class)->create()->id,
         'subject_type' => $subjectType,
-        'subject_id'   => str_contains($subjectType, 'Wiki') ? factory(Wiki::class)->create()->id : factory(Page::class)->create()->id,
+        'subject_id'   => strpos($subjectType, 'Wiki') ?
+                            factory(Wiki::class)->create()->id :
+                            factory(Page::class)->create()->id,
     ];
 });

@@ -8,12 +8,19 @@ use App\Models\Wiki;
 use App\Models\Page;
 use App\Models\User;
 
-$factory->define(App\Models\ReadList::class, function (Faker $faker) {
-    $subjectType = $faker->randomElement([Wiki::class, Page::class]);
+$factory->define(ReadList::class, function (Faker $faker) {
+    $subjectType = $faker->randomElement(
+        [
+            Wiki::class,
+            Page::class
+        ]
+    );
 
     return [
         'subject_type' => $subjectType,
-        'subject_id'   => str_contains($subjectType, 'Wiki') ? factory(Wiki::class)->create()->id : factory(Page::class)->create()->id,
+        'subject_id'   => str_contains($subjectType, 'Wiki') ?
+                            factory(Wiki::class)->create()->id :
+                            factory(Page::class)->create()->id,
         'user_id'      => factory(User::class)->create()->id,
     ];
 });

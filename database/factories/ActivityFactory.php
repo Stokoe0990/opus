@@ -31,7 +31,22 @@ $factory->define(Activity::class, function (Faker $faker) {
     }
 
     return [
-        'name'         => $faker->randomElement(['wiki_created', 'wiki_deleted', 'wiki_updated', 'page_created', 'page_deleted', 'page_updated', 'comment_created', 'comment_deleted', 'comment_updated', 'space_created', 'space_deleted', 'space_updated',]),
+        'name' => $faker->randomElement(
+            [
+                'wiki_created',
+                'wiki_deleted',
+                'wiki_updated',
+                'page_created',
+                'page_deleted',
+                'page_updated',
+                'comment_created',
+                'comment_deleted',
+                'comment_updated',
+                'space_created',
+                'space_deleted',
+                'space_updated',
+            ]
+        ),
         'subject_type' => $subjectType,
         'subject_id'   => $subject->id,
         'user_id'      => factory(User::class)->create()->id,

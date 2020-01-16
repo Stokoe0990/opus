@@ -10,7 +10,13 @@ use App\Models\Comment;
 use App\Models\User;
 
 $factory->define(Like::class, function (Faker $faker) {
-    $subjectType = $faker->randomElement([Wiki::class, Page::class, Comment::class]);
+    $subjectType = $faker->randomElement(
+        [
+            Wiki::class,
+            Page::class,
+            Comment::class
+        ]
+    );
 
     switch ($subjectType) {
         case str_contains($subjectType, 'Wiki'):
