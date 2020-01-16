@@ -8,7 +8,7 @@ use App\Models\Space;
 use App\Models\User;
 use App\Models\Team;
 
-$factory->define(Wiki::class, function (Faker\Generator $faker) {
+$factory->define(Wiki::class, function (Faker $faker) {
     $name = $faker->name;
 
     return [

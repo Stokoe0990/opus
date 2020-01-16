@@ -7,7 +7,7 @@ use App\Models\Integration;
 use App\Models\Team;
 use App\Models\User;
 
-$factory->define(Integration::class, function (Generator $faker) {
+$factory->define(Integration::class, function (Faker $faker) {
     return [
         'title'   => $faker->title,
         'slug'    => $faker->slug,
