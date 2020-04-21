@@ -23,7 +23,8 @@ class JsonSeeder extends Seeder
             Page::create(
                 [
                     'name' => $pageObj->title,
-                    'slug' => $pageObj->text,
+                    'slug' => $this->slugify($pageObj->title),
+                    'outline' => $pageObj->text,
                     'user_id' => 1,
                     'wiki_id' => 26,
                     'team_id' => 1,
@@ -34,5 +35,32 @@ class JsonSeeder extends Seeder
         $this->command->line(
             sprintf('Imported %d pages from pages.json', count($pagesObj))
         );
+    }
+
+    public function slugify($text)
+    {
+        // replace non letter or digits by -
+        $text = preg_replace('~[^\pL\d]+~u', '-', $text);
+
+        // transliterate
+        $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+
+        // remove unwanted characters
+        $text = preg_replace('~[^-\w]+~', '', $text);
+
+        // trim
+        $text = trim($text, '-');
+
+        // remove duplicate -
+        $text = preg_replace('~-+~', '-', $text);
+
+        // lowercase
+        $text = strtolower($text);
+
+        if (empty($text)) {
+            return 'n-a';
+        }
+
+        return $text;
     }
 }
