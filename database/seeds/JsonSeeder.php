@@ -26,7 +26,7 @@ class JsonSeeder extends Seeder
                     'slug' => $this->slugify($pageObj->title),
                     'outline' => $pageObj->text,
                     'user_id' => 1,
-                    'wiki_id' => 26,
+                    'wiki_id' => 27,
                     'team_id' => 1,
                 ]
             );
