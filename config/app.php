@@ -190,6 +190,8 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
 
         Sentry\Laravel\ServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+
     ],
 
     /*
@@ -244,6 +246,7 @@ return [
         'Emoji'        => App\Helpers\EmojiHelper::class,
         
         'Notifynder'   => Fenos\Notifynder\Facades\Notifynder::class,
+        'Socialite'    => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

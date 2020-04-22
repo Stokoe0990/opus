@@ -37,6 +37,7 @@
     "guzzlehttp/guzzle": "~5.3|~6.0",
     "intervention/image": "^2.3",
     "laravel/framework": "5.8.*",
+    "laravel/socialite": "^4.3",
     "laravel/telescope": "^2.0",
     "laravel/tinker": "^1.0",
     "sentry/sentry-laravel": "^1.0"

@@ -46,6 +46,12 @@
 		            <div style="margin-top: 15px; margin-bottom: 10px;">
 			            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
 		            </div>
+
+                    <div style="margin-top: 30px; margin-bottom: 10px; text-align: center;">
+                        <a href="{{ route('google.redirect') }}">
+                            <img src="{{ asset('img/google-auth/btn_google_signin_dark_normal_web.png') }}" alt="">
+                        </a>
+                    </div>
 		        </form>
 			</div>
 		</div>

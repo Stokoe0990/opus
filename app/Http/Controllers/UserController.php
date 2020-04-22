@@ -8,6 +8,7 @@ use DB;
 use Image;
 use Mail;
 use Session;
+use Socialite;
 use App\Models\User;
 use App\Models\Wiki;
 use App\Models\Team;
@@ -402,5 +403,51 @@ class UserController extends Controller
     public function findUser($passwordReset)
     {
         return $this->team->getUser($passwordReset);
+    }
+
+    /**
+     * Redirect the user to the Google authentication page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function redirectToProvider()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    /**
+     * Obtain the user information from Google.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderCallback()
+    {
+        try {
+            $user = Socialite::driver('google')->user();
+        } catch (\Exception $e) {
+            \Log::error($e->getMessage());
+            return redirect('/login')->with([
+                'alert' => 'Google authentication error!',
+            ]);
+        }
+        // only allow people in the configured domain to login
+        if(explode("@", $user->email)[1] !== config('opus.team_domain')){
+            return redirect()->to('/')->with([
+                'alert' => 'You must have already been invited to log in with Google.',
+            ]);
+        }
+        // check if they're an existing user
+        $existingUser = User::where('email', $user->email)->first();
+
+        if($existingUser){
+            // log them in
+            auth()->login($existingUser, true);
+        } else {
+            return redirect()->back()->with([
+                'alert' => 'You must have already been invited to log in with Google.',
+            ]);
+        }
+
+        return redirect()->to('/home');
     }
 }
