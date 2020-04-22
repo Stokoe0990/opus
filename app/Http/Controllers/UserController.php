@@ -311,10 +311,7 @@ class UserController extends Controller
     public function sendResetLinkEmail()
     {
         $this->validate($this->request, [
-            'email'     => 'required|is_email_exists_in_team|email',
-        ], [
-            'is_email_exists_in_team' => 'Email does\'t exists in this team.',
-            'exists'                  => 'The team does not exist.',
+            'email'     => 'required|email',
         ]);
 
         $token = str_rot13(base64_encode(str_rot13(config('opus.team_name') . $this->request->get('email'))));
