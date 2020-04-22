@@ -448,6 +448,6 @@ class UserController extends Controller
             ]);
         }
 
-        return redirect()->to('/home');
+        return redirect()->to('/');
     }
 }
