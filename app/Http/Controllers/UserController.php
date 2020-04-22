@@ -311,19 +311,18 @@ class UserController extends Controller
     public function sendResetLinkEmail()
     {
         $this->validate($this->request, [
-            'team_name' => 'required|exists:teams,name',
             'email'     => 'required|is_email_exists_in_team|email',
         ], [
             'is_email_exists_in_team' => 'Email does\'t exists in this team.',
             'exists'                  => 'The team does not exist.',
         ]);
 
-        $token = str_rot13(base64_encode(str_rot13($this->request->get('team_name') . $this->request->get('email'))));
+        $token = str_rot13(base64_encode(str_rot13(config('opus.team_name') . $this->request->get('email'))));
 
         DB::table('password_resets')->insert([
             'token'      => $token,
             'email'      => $this->request->get('email'),
-            'team_name'  => $this->request->get('team_name'),
+            'team_name'  => config('opus.team_name'),
             'created_at' => Carbon::now(),
         ]);
 

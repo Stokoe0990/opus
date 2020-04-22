@@ -13,5 +13,5 @@ return [
 
 	'mail_sender_address' => env('OPUS_MAIL_SENDER_ADDRESS', 'opus@info.com'),
 	'mail_sender_name' => env('OPUS_MAIL_SENDER_NAME', 'Opus'),
-
+    'team_name' => env('OPUS_TEAM_NAME'),
 ];

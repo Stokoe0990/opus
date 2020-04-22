@@ -8,15 +8,6 @@
                 @if(!Session::get('alert'))
                     <h1 class="header text-center" style="font-size: 28px;">Reset Password</h1>
                     <form action="{{ route('password.email') }}" method="POST" role="form">
-                        <div class="form-group {{ $errors->has('team_name') ? 'has-error' : '' }}">
-                            <label for="team-name" class="control-label">Team Name</label>
-                            <input type="text" name="team_name" class="form-control" id="team-name" autocomplete="on" required="">
-                            @if($errors->has('team_name'))
-                                <p class="help-block has-error">{{ $errors->first('team_name') }}</p>
-                            @else
-                                <p class="help-block">Enter your team name here. e.g. Google</p>
-                            @endif
-                        </div>
                         <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
                             <label for="email" class="control-label">Email</label>
                             <input name="email" id="email" value="{{ old('email') }}" type="email" class="form-control" placeholder="john@doe.com" required>
